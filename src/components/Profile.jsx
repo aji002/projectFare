@@ -10,7 +10,7 @@ function Profile() {
 
   return (
     <>
-        <div className="container-fluid border border-2 border-info p-3">
+        <div className="container-fluid border border-2 border-info p-3 mb-3">
             <div className="d-flex justify-content-between">
                 <h3>Profile</h3>
                 <button className="btn" onClick={toggleProfile}>

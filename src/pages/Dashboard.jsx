@@ -14,7 +14,7 @@ function Dashboard() {
             <AddProject />
 
             <div className="w-100 border border-3 border-light p-2 mt-4">
-              <div className="m-3 border border-2 border-info p-2 d-flex justify-content-between align-items-center">
+              <div className="m-3 border border-2 border-info p-2 d-flex justify-content-between">
                 <h5>Project Title</h5>
                 <div>
                   <a href="" className='me-3'>

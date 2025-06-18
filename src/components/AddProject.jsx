@@ -11,7 +11,7 @@ function AddProject() {
     const handleShow = () => setShow(true);
     return (
         <>
-            <button className="btn btn-secondary" onClick={handleShow}>Add Project + </button>
+            <button className="btn btn-secondary" onClick={handleShow}>Add New Project + </button>
             <Modal
                 show={show}
                 onHide={handleClose}
@@ -30,10 +30,10 @@ function AddProject() {
                             </label>
                         </div>
                         <div className="col">
-                            <input type="text" placeholder='Enter title' className='form-control mb-3' />
+                            <input type="text" placeholder='Enter Title' className='form-control mb-3' />
                             <input type="text" placeholder='Enter Description' className='form-control mb-3' />
-                            <input type="text" placeholder='Enter Language used' className='form-control mb-3' />
-                            <input type="text" placeholder='Enter git repo URL' className='form-control mb-3' />
+                            <input type="text" placeholder='Enter Language Used' className='form-control mb-3' />
+                            <input type="text" placeholder='Enter Git Repo URL' className='form-control mb-3' />
                             <input type="text" placeholder='Enter Demo URL' className='form-control mb-3' />
                         </div>
                     </div>
