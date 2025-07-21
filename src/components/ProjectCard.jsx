@@ -3,8 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import base_url from '../services/base_url';
 
-function ProjectCard() {
+function ProjectCard({project}) {
 
   const [show, setShow] = useState(false);
 
@@ -13,10 +14,10 @@ function ProjectCard() {
 
   return (
     <>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img onClick={handleShow} variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjlWl5eL6nkHFh3DlavM4tzmFZ7p_knh2LiA&s" />
+      <Card style={{ width: '18rem', marginBottom:'20px' }}>
+        <Card.Img onClick={handleShow} variant="top" src={`${base_url}/projectimg/${project.image}`} />
         <Card.Body>
-          <Card.Title>Blog App</Card.Title>
+          <Card.Title>{project.title}</Card.Title>
         </Card.Body>
       </Card>
 
@@ -33,24 +34,24 @@ function ProjectCard() {
         <Modal.Body>
           <div className="row">
             <div className="col">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjlWl5eL6nkHFh3DlavM4tzmFZ7p_knh2LiA&s" className='w-75' alt="" />
+              <img src={`${base_url}/projectimg/${project.image}`} className='w-75' alt="" />
             </div>
             <div className="col">
-              <h3>Project Title</h3>
+              <h3>{project.title}</h3>
               <p>
                 <span className='fw-bolder'>Description : </span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ratione nulla blanditiis doloremque molestias neque temporibus, sunt odit optio officiis, repellat quia ipsum beatae iusto facere ab voluptatum, libero doloribus?
+                {project.description}
 
               </p>
               <p>
                   <span className='fw-bolder'>Language : </span>
-                  HTML,CSS,JS
+                  {project.languages}
               </p>
               <div className="d-flex justify-content-between">
-                <a href="">
+                <a href={project.gitrepo}>
                   <i className="fa-brands fa-square-github fa-xl"></i>
                 </a>
-                <a href="">
+                <a href={project.demo}>
                   <i className="fa-solid fa-link fa-xl"></i>
                 </a>
               </div>
